@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  leancache:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: leancache-node
+    ports:
+      - "6379:6379"
+    environment:
+      - LEANCACHE_PORT=6379
+      - LEANCACHE_LOG_LEVEL=Information
+    volumes:
+      - leancache-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  leancache-data:

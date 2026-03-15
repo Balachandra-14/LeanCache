@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LeanCache.Benchmark/LeanCache.Benchmark.csproj" />
+    <Project Path="src/LeanCache.Client/LeanCache.Client.csproj" />
+    <Project Path="src/LeanCache.Core/LeanCache.Core.csproj" />
+    <Project Path="src/LeanCache.Protocol/LeanCache.Protocol.csproj" />
+    <Project Path="src/LeanCache.Server/LeanCache.Server.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LeanCache.Client.Tests/LeanCache.Client.Tests.csproj" />
+    <Project Path="tests/LeanCache.Core.Tests/LeanCache.Core.Tests.csproj" />
+    <Project Path="tests/LeanCache.Protocol.Tests/LeanCache.Protocol.Tests.csproj" />
+    <Project Path="tests/LeanCache.Server.Tests/LeanCache.Server.Tests.csproj" />
+  </Folder>
+</Solution>

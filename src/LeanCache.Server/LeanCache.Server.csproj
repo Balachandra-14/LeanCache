@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LeanCache.Core\LeanCache.Core.csproj" />
+    <ProjectReference Include="..\LeanCache.Protocol\LeanCache.Protocol.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,62 @@
+version: "3.8"
+
+services:
+  leancache-node1:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: leancache-node1
+    ports:
+      - "6379:6379"
+    environment:
+      - LEANCACHE_PORT=6379
+      - LEANCACHE_NODE_ID=node1
+      - LEANCACHE_CLUSTER_SEEDS=leancache-node2:6379,leancache-node3:6379
+      - LEANCACHE_LOG_LEVEL=Information
+    volumes:
+      - node1-data:/app/data
+    networks:
+      - leancache-net
+
+  leancache-node2:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: leancache-node2
+    ports:
+      - "6380:6379"
+    environment:
+      - LEANCACHE_PORT=6379
+      - LEANCACHE_NODE_ID=node2
+      - LEANCACHE_CLUSTER_SEEDS=leancache-node1:6379,leancache-node3:6379
+      - LEANCACHE_LOG_LEVEL=Information
+    volumes:
+      - node2-data:/app/data
+    networks:
+      - leancache-net
+
+  leancache-node3:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: leancache-node3
+    ports:
+      - "6381:6379"
+    environment:
+      - LEANCACHE_PORT=6379
+      - LEANCACHE_NODE_ID=node3
+      - LEANCACHE_CLUSTER_SEEDS=leancache-node1:6379,leancache-node2:6379
+      - LEANCACHE_LOG_LEVEL=Information
+    volumes:
+      - node3-data:/app/data
+    networks:
+      - leancache-net
+
+volumes:
+  node1-data:
+  node2-data:
+  node3-data:
+
+networks:
+  leancache-net:
+    driver: bridge

@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>LeanCache Contributors</Authors>
+    <Company>LeanCache</Company>
+    <Product>LeanCache</Product>
+    <Description>A distributed in-memory cache built from scratch for learning.</Description>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+</Project>
