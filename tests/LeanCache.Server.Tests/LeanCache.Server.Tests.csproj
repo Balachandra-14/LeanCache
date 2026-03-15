@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\LeanCache.Server\LeanCache.Server.csproj" />
     <ProjectReference Include="..\..\src\LeanCache.Core\LeanCache.Core.csproj" />
+    <ProjectReference Include="..\..\src\LeanCache.Protocol\LeanCache.Protocol.csproj" />
   </ItemGroup>
 
 </Project>

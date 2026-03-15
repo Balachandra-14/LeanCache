@@ -118,6 +118,9 @@ public class CacheStoreConcurrencyTests : IDisposable
 
         await Task.WhenAll(tasks);
 
+        // Ensure all keys have expired before sweeping
+        await Task.Delay(50);
+
         // Sweep should clean up anything remaining
         _store.RemoveExpiredKeys();
 
