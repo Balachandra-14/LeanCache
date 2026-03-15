@@ -3,7 +3,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copy solution and project files first for layer caching
-COPY LeanCache.sln Directory.Build.props ./
+COPY LeanCache.slnx Directory.Build.props ./
+COPY tests/Directory.Build.props tests/
 COPY src/LeanCache.Core/LeanCache.Core.csproj src/LeanCache.Core/
 COPY src/LeanCache.Protocol/LeanCache.Protocol.csproj src/LeanCache.Protocol/
 COPY src/LeanCache.Server/LeanCache.Server.csproj src/LeanCache.Server/
