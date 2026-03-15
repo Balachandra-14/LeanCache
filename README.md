@@ -2,7 +2,7 @@
 
 > A distributed in-memory cache built from scratch in C#/.NET — for learning enterprise distributed systems architecture.
 
-[![CI](https://github.com/YOUR_USERNAME/LeanCache/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/LeanCache/actions/workflows/ci.yml)
+[![CI](https://github.com/Balachandra-14/LeanCache/actions/workflows/ci.yml/badge.svg)](https://github.com/Balachandra-14/LeanCache/actions/workflows/ci.yml)
 
 ## What is LeanCache?
 
